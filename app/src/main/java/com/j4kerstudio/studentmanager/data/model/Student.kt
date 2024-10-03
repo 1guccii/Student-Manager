@@ -1,6 +1,12 @@
 package com.j4kerstudio.studentmanager.data.model
 
-data class Student(
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+
+@Entity(tableName = "Student")
+data class Student (
+    @PrimaryKey(autoGenerate = true)
     val idStudent: String,
     val idClass : String,
     val mathematicsGrade : Double,
