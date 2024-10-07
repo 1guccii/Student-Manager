@@ -1,5 +1,6 @@
 package com.j4kerstudio.studentmanager.data.model
 
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
@@ -8,8 +9,8 @@ import androidx.room.PrimaryKey
 data class Student (
     @PrimaryKey(autoGenerate = true)
     val idStudent: String,
-    val idClass : String,
-    val mathematicsGrade : Double,
-    val physicGrade : Double,
-    val chemistryGrade : Double
+    @ColumnInfo(name = "id_class") val idClass : String,
+    @ColumnInfo(name = "mathematics_grade") val mathematicsGrade : Double,
+    @ColumnInfo(name = "physic_grade") val physicGrade : Double,
+    @ColumnInfo(name = "chemistry_grade") val chemistryGrade : Double
 )

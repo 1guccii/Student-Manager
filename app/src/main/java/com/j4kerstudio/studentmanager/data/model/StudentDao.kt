@@ -14,8 +14,8 @@ interface StudentDao {
     @Query("select * from student ORDER BY idStudent ASC")
     fun getAllStudents(): Flow<List<Student>>
 
-    @Query("select * from student where idStudent ")
-    fun getStudent(id: Int): Flow<Student>
+    @Query("select * from student where idStudent = :id")
+    fun getStudent(id: Int): Flow<Student?>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insert(student: Student)

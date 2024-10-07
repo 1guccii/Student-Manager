@@ -1,4 +1,4 @@
-package com.j4kerstudio.studentmanager.presentation.fragment
+package com.j4kerstudio.studentmanager.data.source.presentation.fragment
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Column
@@ -24,21 +24,25 @@ fun CardInformation() {
         shape = RoundedCornerShape(5.dp),
         modifier = Modifier
             .width(300.dp)
-            .height(400.dp)
+            .height(500.dp)
 
     ) {
         Column(
             modifier = Modifier.padding(24.dp)
         ) {
-            Text(text = "Grade", style = Typography.bodyLarge)
             Spacer(modifier = Modifier.height(12.dp))
             Text(text = "Student Information", style = Typography.bodyLarge)
+            Spacer(modifier = Modifier.height(8.dp))
+            Text(text = "Hoang Duc Manh")
+            Spacer(modifier = Modifier.height(8.dp))
+            Text(text = "id Student : 23010346")
             Spacer(modifier = Modifier.height(12.dp))
             HorizontalDivider()
-            CardGrade()
+            CardGrade("Mathematics")
             HorizontalDivider()
-            CardGrade()
+            CardGrade("Physics")
             HorizontalDivider()
+            CardGrade("Chemistry")
         }
     }
 }

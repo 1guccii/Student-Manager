@@ -1,10 +1,17 @@
-package com.j4kerstudio.studentmanager.data.model
+package com.j4kerstudio.studentmanager.data.repository
 
+import com.j4kerstudio.studentmanager.data.model.Student
 import kotlinx.coroutines.flow.Flow
 
 interface StudentRepository {
 
-    fun getStudentStream() : Flow<List<Student>>
+    fun getAllStudent(): Flow<List<Student>>
 
-    fun getEnglishGrade() : Flow<List>
+    fun getStudentStream(id: Int) : Flow<Student?>
+
+    suspend fun insertStudent(student: Student)
+
+    suspend fun deleteStudent(student: Student)
+
+    suspend fun updateStudent(student: Student)
 }
