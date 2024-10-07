@@ -17,4 +17,22 @@ enum class StudentNavGraph {
     Write
 }
 
+@Composable
+fun StudentNavHost(
+    navController: NavHostController
+) {
+    val navController = rememberNavController()
+    NavHost(navController = navController, startDestination = StudentNavGraph.HOME.name) {
+        composable(StudentNavGraph.HOME.name) {
+            HomeScreen(navController = navController)
+        }
+        composable(StudentNavGraph.Write.name) {
+            WriteScreen(navController = navController)
+        }
+        composable(StudentNavGraph.SEARCH.name) {
+            SearchScreen(navController = navController)
+        }
+    }
+}
+
 
