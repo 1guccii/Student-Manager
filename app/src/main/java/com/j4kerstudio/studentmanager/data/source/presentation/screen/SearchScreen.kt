@@ -1,4 +1,4 @@
-package com.j4kerstudio.studentmanager.presentation.screen
+package com.j4kerstudio.studentmanager.data.source.presentation.screen
 
 import android.widget.Space
 import androidx.compose.foundation.layout.Column
@@ -16,20 +16,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.j4kerstudio.studentmanager.presentation.fragment.BottomAppBar
-import com.j4kerstudio.studentmanager.presentation.fragment.CardGrade
-import com.j4kerstudio.studentmanager.presentation.fragment.CardInformation
+import com.j4kerstudio.studentmanager.data.source.presentation.fragment.BottomAppBar
+import com.j4kerstudio.studentmanager.data.source.presentation.fragment.CardGrade
+import com.j4kerstudio.studentmanager.data.source.presentation.fragment.CardInformation
 
 @Composable
 fun SearchScreen() {
-
-}
-
-@Preview
-@Composable
-fun SearchScreenPreview() {
     Scaffold(
-        bottomBar = {BottomAppBar()}
+        bottomBar = { BottomAppBar() }
     ) { innerPadding->
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
@@ -38,14 +32,15 @@ fun SearchScreenPreview() {
                 .fillMaxWidth()
         ) {
             Spacer(modifier = Modifier.weight(1f))
-            OutlinedTextField(
-                value = "",
-                onValueChange = {},
-                label = { Text(text = "Id Student")}
-            )
             Spacer(modifier = Modifier.weight(2f))
             CardInformation()
             Spacer(modifier = Modifier.weight(3f))
         }
     }
+}
+
+@Preview
+@Composable
+fun SearchScreenPreview() {
+    SearchScreen()
 }

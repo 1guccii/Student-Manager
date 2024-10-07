@@ -1,4 +1,4 @@
-package com.j4kerstudio.studentmanager.presentation.fragment
+package com.j4kerstudio.studentmanager.data.source.presentation.fragment
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -37,7 +37,7 @@ fun BottomAppBar() {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             IconButton(onClick = { /*TODO*/ }) {
-                Icon(
+                Icon (
                     imageVector = ImageVector.vectorResource(id = R.drawable.vector),
                     contentDescription = ""
                 )

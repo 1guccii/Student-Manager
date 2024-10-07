@@ -1,4 +1,4 @@
-package com.j4kerstudio.studentmanager.presentation.fragment
+package com.j4kerstudio.studentmanager.data.source.presentation.fragment
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -19,7 +19,7 @@ import androidx.compose.ui.unit.dp
 import com.j4kerstudio.studentmanager.ui.theme.Typography
 
 @Composable
-fun CardGrade() {
+fun CardGrade(title: String) {
     Card(
         modifier = Modifier
             .width(285.dp)
@@ -33,7 +33,7 @@ fun CardGrade() {
                 verticalArrangement = Arrangement.Center,
                 modifier = Modifier.fillMaxHeight()
             ) {
-                Text(text = "English", style = Typography.bodyLarge)
+                Text(text = title, style = Typography.bodyLarge)
                 Spacer(modifier = Modifier.height(8.dp))
                 Text(text = "9.2")
             }
@@ -45,5 +45,5 @@ fun CardGrade() {
 @Composable
 @Preview
 fun CardGradePreview() {
-    CardGrade()
+    CardGrade("English")
 }
