@@ -19,11 +19,14 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.j4kerstudio.studentmanager.R
+import com.j4kerstudio.studentmanager.data.source.presentation.navigation.StudentNavGraph
 import com.j4kerstudio.studentmanager.ui.theme.Typography
 
 @Composable
-fun BottomAppBar() {
+fun BottomAppBar(navController: NavController) {
     Row(
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.Absolute.SpaceEvenly,
@@ -36,7 +39,7 @@ fun BottomAppBar() {
         Column(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            IconButton(onClick = { /*TODO*/ }) {
+            IconButton(onClick = { navController.navigate(StudentNavGraph.HOME.name )}) {
                 Icon (
                     imageVector = ImageVector.vectorResource(id = R.drawable.vector),
                     contentDescription = ""
@@ -48,13 +51,13 @@ fun BottomAppBar() {
         Column(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            IconButton(onClick = { /*TODO*/ }) {
+            IconButton(onClick = { navController.navigate(StudentNavGraph.SEARCH.name) }) {
                 Icon(
                     imageVector = ImageVector.vectorResource(id = R.drawable.vector1),
                     contentDescription = ""
                 )
             }
-            Text(text = "List", style = Typography.bodySmall)
+            Text(text = "View", style = Typography.bodySmall)
 
         }
     }
@@ -64,5 +67,5 @@ fun BottomAppBar() {
 @Preview
 @Composable
 fun BottomAppBarPreview() {
-    BottomAppBar()
+    BottomAppBar(navController = rememberNavController())
 }

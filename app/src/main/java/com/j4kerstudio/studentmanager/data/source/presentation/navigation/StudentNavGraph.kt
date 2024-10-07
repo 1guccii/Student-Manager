@@ -8,14 +8,14 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.j4kerstudio.studentmanager.data.source.presentation.screen.HomeScreen
+import com.j4kerstudio.studentmanager.data.source.presentation.screen.SearchScreen
+import com.j4kerstudio.studentmanager.data.source.presentation.screen.WriteScreen
 
 enum class StudentNavGraph {
     HOME,
     SEARCH,
-    INFORMATION,
     Write
 }
-
 
 @Composable
 fun StudentNavHost(
@@ -26,8 +26,13 @@ fun StudentNavHost(
         composable(StudentNavGraph.HOME.name) {
             HomeScreen(navController = navController)
         }
-
+        composable(StudentNavGraph.Write.name) {
+            WriteScreen(navController = navController)
+        }
+        composable(StudentNavGraph.SEARCH.name) {
+            SearchScreen(navController = navController)
+        }
     }
-
-
 }
+
+
