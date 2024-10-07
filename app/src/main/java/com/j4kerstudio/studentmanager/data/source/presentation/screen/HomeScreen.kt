@@ -1,6 +1,7 @@
 package com.j4kerstudio.studentmanager.data.source.presentation.screen
 
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
@@ -18,14 +19,16 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.j4kerstudio.studentmanager.data.source.presentation.fragment.BottomAppBar
+import com.j4kerstudio.studentmanager.data.source.presentation.navigation.StudentNavGraph
 
 @Composable
 fun HomeScreen(navController: NavController) {
     Scaffold(
-        bottomBar = { BottomAppBar() },
+        modifier = Modifier.navigationBarsPadding(),
+        bottomBar = { BottomAppBar(navController) },
         floatingActionButton =  {
             FloatingActionButton(
-                onClick = { /* Xử lý sự kiện click ở đây */ },
+                onClick = { navController.navigate( StudentNavGraph.Write.name) },
                 containerColor = MaterialTheme.colorScheme.primary // Màu của FAB
             ) {
                 Icon(

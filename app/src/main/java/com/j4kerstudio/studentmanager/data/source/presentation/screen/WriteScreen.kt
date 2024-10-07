@@ -16,6 +16,7 @@ import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -27,11 +28,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.j4kerstudio.studentmanager.data.source.presentation.fragment.BottomAppBar
 import com.j4kerstudio.studentmanager.data.source.presentation.fragment.TextFieldBox
+import com.j4kerstudio.studentmanager.data.source.presentation.navigation.StudentNavGraph
 
 @Composable
-fun WriteScreen() {
+fun WriteScreen(navController: NavController) {
     val context = LocalContext.current // Lấy context đúng cách
 
     var showToast by remember { mutableStateOf(false) } // Biến để điều khiển Toast
@@ -45,11 +49,11 @@ fun WriteScreen() {
     }
 
     Scaffold(
-        bottomBar = { BottomAppBar() },
+        bottomBar = { BottomAppBar(navController) },
         modifier = Modifier.navigationBarsPadding(),
         floatingActionButton =  {
             FloatingActionButton(
-                onClick = { /* Xử lý sự kiện click ở đây */ },
+                onClick = { navController.navigate(StudentNavGraph.SEARCH.name) },
                 containerColor = MaterialTheme.colorScheme.primary // Màu của FAB
             ) {
                 Icon(
@@ -69,7 +73,7 @@ fun WriteScreen() {
         ) {
             TextFieldBox(label = "id Student")
             Spacer(modifier = Modifier.height(50.dp))
-            TextFieldBox(label = "id Class")
+            TextFieldBox(label = "Full Name")
             Spacer(modifier = Modifier.height(50.dp))
             TextFieldBox(label = "Mathematics")
             Spacer(modifier = Modifier.height(50.dp))
@@ -78,10 +82,7 @@ fun WriteScreen() {
             TextFieldBox(label = "Chemistry")
             Spacer(modifier = Modifier.height(60.dp))
             Button(onClick = { showToast = true } ) {
-                Icon(
-                    imageVector = Icons.Default.Done, // Icon cho FAB
-                    contentDescription = "Done"
-                )
+                Text(text = "Submit")
             }
         }
     }
@@ -90,5 +91,5 @@ fun WriteScreen() {
 @Preview
 @Composable
 fun WriteScreenPreview() {
-    WriteScreen()
+    WriteScreen(navController = rememberNavController())
 }
