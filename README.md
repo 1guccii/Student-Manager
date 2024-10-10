@@ -43,7 +43,11 @@ Xóa sinh viên khỏi lớp học.
 <img src="https://github.com/user-attachments/assets/19908e05-a273-4e79-a5da-0d20fc35cff2" alt="Xóa sinh viên" width="600">
 
 ## Giao diện của dự án
-<img src="https://github.com/user-attachments/assets/41c8a31b-ac50-4e7c-bc22-36d4b100aa3a" alt="Giao diện của dự án" width="600">
+<img src="https://github.com/user-attachments/assets/2f1c6e06-8755-405f-af55-9c34d44f3e7a" alt="Giao diện của dự án" width="600">
+
+
+<img src="https://github.com/user-attachments/assets/5b19a55f-b7a5-4c8e-be14-c1ed74b9aff5" alt="Giao diện của dự án" width="600">
+
 
 
 
