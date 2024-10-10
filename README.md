@@ -29,22 +29,23 @@ Xóa sinh viên khỏi lớp học.
 ## UML Dự Án
 
 ### 1.1 UML Component Diagram
-
-![image](https://github.com/user-attachments/assets/20a3457a-35fc-4b49-ae2b-4b5c7f98efaf)
+<img src="https://github.com/user-attachments/assets/20a3457a-35fc-4b49-ae2b-4b5c7f98efaf" alt="UML Component Diagram" width="600">
 
 ### 1.2 UML Sequence Diagram
 
 #### Tìm kiếm sinh viên
-![image](https://github.com/user-attachments/assets/9a605c62-294d-4c34-b445-e0dfb2f5753e)
+<img src="https://github.com/user-attachments/assets/9a605c62-294d-4c34-b445-e0dfb2f5753e" alt="Tìm kiếm sinh viên" width="600">
 
-#### Sửa thông tin sinh viên  
-![image](https://github.com/user-attachments/assets/4341739f-f2a2-41d3-bfd2-c35a2a0ab69c)
+#### Sửa thông tin sinh viên
+<img src="https://github.com/user-attachments/assets/4341739f-f2a2-41d3-bfd2-c35a2a0ab69c" alt="Sửa thông tin sinh viên" width="600">
 
-#### Xóa sinh viên 
-![image](https://github.com/user-attachments/assets/19908e05-a273-4e79-a5da-0d20fc35cff2)
+#### Xóa sinh viên
+<img src="https://github.com/user-attachments/assets/19908e05-a273-4e79-a5da-0d20fc35cff2" alt="Xóa sinh viên" width="600">
 
-## Giao diện của dự án 
-![z5907241841731_562f996659de93d3d5fe9e9d9ee22082](https://github.com/user-attachments/assets/b6f68edc-62df-47b7-b3fb-ab14a05f16ed)
+## Giao diện của dự án
+<img src="https://github.com/user-attachments/assets/41c8a31b-ac50-4e7c-bc22-36d4b100aa3a" alt="Giao diện của dự án" width="600">
+
+
 
 
 
