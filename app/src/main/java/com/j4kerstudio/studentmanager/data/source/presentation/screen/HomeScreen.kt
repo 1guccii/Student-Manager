@@ -41,7 +41,10 @@ fun HomeScreen(navController: NavController) {
         Column(
             modifier = Modifier.padding(innerPadding)
         ) {
-
+                Text(
+                "Welcome to my App",
+                style = Typography.displayMedium
+                )
 
         }
     }
