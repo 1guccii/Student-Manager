@@ -25,7 +25,6 @@ fun CardInformation() {
         modifier = Modifier
             .width(300.dp)
             .height(500.dp)
-
     ) {
         Column(
             modifier = Modifier.padding(24.dp)

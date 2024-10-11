@@ -14,7 +14,20 @@ import com.j4kerstudio.studentmanager.data.source.presentation.screen.WriteScree
 enum class StudentNavGraph {
     HOME,
     SEARCH,
-    Write
+    WRITE
 }
 
 
+@Composable
+fun StudentNavHost(navController: NavController) {
+    val navController = rememberNavController()
+    NavHost(navController = navController, startDestination = StudentNavGraph.HOME.name) {
+        composable(route = StudentNavGraph.HOME.name) {
+            HomeScreen(navController = navController)
+        }
+        composable(route = StudentNavGraph.SEARCH.name) {
+            SearchScreen(navController = navController)
+        }
+
+    }
+}

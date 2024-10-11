@@ -28,7 +28,7 @@ fun HomeScreen(navController: NavController) {
         bottomBar = { BottomAppBar(navController) },
         floatingActionButton =  {
             FloatingActionButton(
-                onClick = { navController.navigate( StudentNavGraph.Write.name) },
+                onClick = { navController.navigate( StudentNavGraph.WRITE.name) },
                 containerColor = MaterialTheme.colorScheme.primary // Màu của FAB
             ) {
                 Icon(
