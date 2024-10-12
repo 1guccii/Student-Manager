@@ -27,8 +27,3 @@ fun TextFieldBox(label: String) {
     )
 }
 
-@Preview
-@Composable
-fun TextFieldPreview() {
-    TextFieldBox(label = "Hello")
-}
