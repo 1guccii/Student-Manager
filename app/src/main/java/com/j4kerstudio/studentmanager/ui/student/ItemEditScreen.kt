@@ -16,7 +16,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.j4kerstudio.studentmanager.InventoryTopAppBar
 import com.j4kerstudio.studentmanager.R
-import com.j4kerstudio.studentmanager.data.source.AppViewModelProvider
+import com.j4kerstudio.studentmanager.source.AppViewModelProvider
 import com.j4kerstudio.studentmanager.ui.navigation.NavigationDestination
 import kotlinx.coroutines.launch
 
@@ -29,7 +29,7 @@ object ItemEditDestination : NavigationDestination {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun StudentEditScreen(
+fun ItemEditScreen(
     navigateBack: () -> Unit,
     onNavigateUp: () -> Unit,
     modifier: Modifier = Modifier,
@@ -73,5 +73,5 @@ fun StudentEditScreen(
 @Preview(showBackground = true)
 @Composable
 fun ItemEditScreenPreview() {
-        StudentEditScreen(navigateBack = { /*Do nothing*/ }, onNavigateUp = { /*Do nothing*/ })
+        ItemEditScreen(navigateBack = { /*Do nothing*/ }, onNavigateUp = { /*Do nothing*/ })
 }

@@ -44,7 +44,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.j4kerstudio.studentmanager.InventoryTopAppBar
 import com.j4kerstudio.studentmanager.R
-import com.j4kerstudio.studentmanager.data.source.AppViewModelProvider
+import com.j4kerstudio.studentmanager.data.model.Item
+import com.j4kerstudio.studentmanager.source.AppViewModelProvider
 import com.j4kerstudio.studentmanager.ui.navigation.NavigationDestination
 import kotlinx.coroutines.launch
 
@@ -128,7 +129,8 @@ private fun ItemDetailsBody(
     ) {
         var deleteConfirmationRequired by rememberSaveable { mutableStateOf(false) }
         ItemDetails(
-            item = itemDetailsUiState.itemDetails.toItem(), modifier = Modifier.fillMaxWidth() )
+            item = itemDetailsUiState.itemDetails.toItem(), modifier = Modifier.fillMaxWidth()
+        )
         Button(
             onClick = onSellItem,
             modifier = Modifier.fillMaxWidth(),
@@ -160,7 +162,7 @@ private fun ItemDetailsBody(
 
 @Composable
 fun ItemDetails(
-    student: Student, modifier: Modifier = Modifier
+    item: Item, modifier: Modifier = Modifier
 ) {
     Card(
         modifier = modifier, colors = CardDefaults.cardColors(
@@ -176,7 +178,7 @@ fun ItemDetails(
         ) {
             ItemDetailsRow(
                 labelResID = R.string.item,
-                itemDetail = student.name,
+                itemDetail = item.name,
                 modifier = Modifier.padding(
                     horizontal = dimensionResource(
                         id = R.dimen
@@ -186,7 +188,7 @@ fun ItemDetails(
             )
             ItemDetailsRow(
                 labelResID = R.string.quantity_in_stock,
-                itemDetail = student.idStudent.toString(),
+                itemDetail = item.quantity.toString(),
                 modifier = Modifier.padding(
                     horizontal = dimensionResource(
                         id = R.dimen
@@ -196,7 +198,7 @@ fun ItemDetails(
             )
             ItemDetailsRow(
                 labelResID = R.string.price,
-                itemDetail = student.mathematicsGrade.toString(),
+                itemDetail = item.formatedPrice(),
                 modifier = Modifier.padding(
                     horizontal = dimensionResource(
                         id = R.dimen
@@ -238,14 +240,4 @@ private fun DeleteConfirmationDialog(
                 Text(text = stringResource(R.string.yes))
             }
         })
-}
-
-@Preview(showBackground = true)
-@Composable
-fun ItemDetailsScreenPreview() {
-    InventoryTheme {
-        ItemDetailsBody(ItemDetailsUiState(
-            outOfStock = true, itemDetails = ItemDetails(1, "Pen", "$100", "10")
-        ), onSellItem = {}, onDelete = {})
-    }
 }

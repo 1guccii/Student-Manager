@@ -9,6 +9,12 @@ import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import com.j4kerstudio.studentmanager.ui.home.HomeDestination
 import com.j4kerstudio.studentmanager.ui.home.HomeScreen
+import com.j4kerstudio.studentmanager.ui.student.ItemDetailsDestination
+import com.j4kerstudio.studentmanager.ui.student.ItemDetailsScreen
+import com.j4kerstudio.studentmanager.ui.student.ItemEditDestination
+import com.j4kerstudio.studentmanager.ui.student.ItemEditScreen
+import com.j4kerstudio.studentmanager.ui.student.ItemEntryDestination
+import com.j4kerstudio.studentmanager.ui.student.ItemEntryScreen
 
 /**
  * Provides Navigation graph for the application.

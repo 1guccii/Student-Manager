@@ -6,7 +6,7 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.j4kerstudio.studentmanager.data.repository.StudentRepository
+import com.j4kerstudio.studentmanager.data.model.ItemsRepository
 import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
@@ -14,9 +14,13 @@ import kotlinx.coroutines.launch
 /**
  * ViewModel to retrieve and update an item from the [ItemsRepository]'s data source.
  */
+
+/**
+ * ViewModel to retrieve and update an item from the [ItemsRepository]'s data source.
+ */
 class ItemEditViewModel(
     savedStateHandle: SavedStateHandle,
-    private val studentRepository: StudentRepository
+    private val itemsRepository: ItemsRepository
 ) : ViewModel() {
 
     /**
@@ -29,7 +33,7 @@ class ItemEditViewModel(
 
     init {
         viewModelScope.launch {
-            itemUiState = studentRepository.getAllStudentStream(itemId)
+            itemUiState = itemsRepository.getItemStream(itemId)
                 .filterNotNull()
                 .first()
                 .toItemUiState(true)
@@ -41,7 +45,7 @@ class ItemEditViewModel(
      */
     suspend fun updateItem() {
         if (validateInput(itemUiState.itemDetails)) {
-            studentRepository.updateStudent(itemUiState.itemDetails.toItem())
+            itemsRepository.updateItem(itemUiState.itemDetails.toItem())
         }
     }
 

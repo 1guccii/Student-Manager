@@ -41,8 +41,10 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.j4kerstudio.studentmanager.InventoryTopAppBar
 import com.j4kerstudio.studentmanager.R
-import com.j4kerstudio.studentmanager.data.source.AppViewModelProvider
+import com.j4kerstudio.studentmanager.data.model.Item
+import com.j4kerstudio.studentmanager.source.AppViewModelProvider
 import com.j4kerstudio.studentmanager.ui.navigation.NavigationDestination
+import com.j4kerstudio.studentmanager.ui.student.formatedPrice
 
 
 object HomeDestination : NavigationDestination {
@@ -101,7 +103,7 @@ fun HomeScreen(
 
 @Composable
 private fun HomeBody(
-    itemList: List<Student>,
+    itemList: List<Item>,
     onItemClick: (Int) -> Unit,
     modifier: Modifier = Modifier,
     contentPadding: PaddingValues = PaddingValues(0.dp),
@@ -129,9 +131,9 @@ private fun HomeBody(
 }
 
 @Composable
-private fun StudentList(
-    itemList: List<Student>,
-    onItemClick: (Student) -> Unit,
+private fun InventoryList(
+    itemList: List<Item>,
+    onItemClick: (Item) -> Unit,
     contentPadding: PaddingValues,
     modifier: Modifier = Modifier
 ) {
@@ -183,27 +185,7 @@ private fun InventoryItem(
 @Preview(showBackground = true)
 @Composable
 fun HomeBodyPreview() {
-    InventoryTheme {
         HomeBody(listOf(
-            Student(1, "Game", "12213", 12), Item(2, "Pen", 200.0, 30), Item(3, "TV", 300.0, 50)
+            Item(1, "Game", 100.0, 20), Item(2, "Pen", 200.0, 30), Item(3, "TV", 300.0, 50)
         ), onItemClick = {})
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun HomeBodyEmptyListPreview() {
-    InventoryTheme {
-        HomeBody(listOf(), onItemClick = {})
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun InventoryItemPreview() {
-    InventoryTheme {
-        InventoryItem(
-            Item(1, "Game", 100.0, 20),
-        )
-    }
 }

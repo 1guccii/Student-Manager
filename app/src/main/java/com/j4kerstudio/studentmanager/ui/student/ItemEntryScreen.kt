@@ -25,22 +25,23 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
+
 import com.j4kerstudio.studentmanager.InventoryTopAppBar
 import com.j4kerstudio.studentmanager.R
-import com.j4kerstudio.studentmanager.data.source.AppViewModelProvider
+import com.j4kerstudio.studentmanager.source.AppViewModelProvider
 import com.j4kerstudio.studentmanager.ui.navigation.NavigationDestination
 import kotlinx.coroutines.launch
 import java.util.Currency
 import java.util.Locale
 
-object StudentEntryDestination : NavigationDestination {
+object ItemEntryDestination : NavigationDestination {
     override val route = "item_entry"
     override val titleRes = R.string.item_entry_title
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun StudentEntryScreen(
+fun ItemEntryScreen(
     navigateBack: () -> Unit,
     onNavigateUp: () -> Unit,
     canNavigateBack: Boolean = true,
@@ -49,14 +50,14 @@ fun StudentEntryScreen(
     val coroutineScope = rememberCoroutineScope()
     Scaffold(
         topBar = {
-            StudentTopAppBar(
-                title = stringResource(StudentEntryDestination.titleRes),
+            InventoryTopAppBar(
+                title = stringResource(ItemEntryDestination.titleRes),
                 canNavigateBack = canNavigateBack,
                 navigateUp = onNavigateUp
             )
         }
     ) { innerPadding ->
-        StudentEntryBody(
+        ItemEntryBody(
             itemUiState = viewModel.itemUiState,
             onItemValueChange = viewModel::updateUiState,
             onSaveClick = {
@@ -82,7 +83,7 @@ fun StudentEntryScreen(
 }
 
 @Composable
-fun StudentEntryBody(
+fun ItemEntryBody(
     itemUiState: ItemUiState,
     onItemValueChange: (ItemDetails) -> Unit,
     onSaveClick: () -> Unit,
@@ -109,7 +110,7 @@ fun StudentEntryBody(
 }
 
 @Composable
-fun StudentInputForm(
+fun ItemInputForm(
     itemDetails: ItemDetails,
     modifier: Modifier = Modifier,
     onValueChange: (ItemDetails) -> Unit = {},
@@ -148,7 +149,7 @@ fun StudentInputForm(
             singleLine = true
         )
         OutlinedTextField(
-            value = studentDetail.quantity,
+            value = itemDetails.quantity,
             onValueChange = { onValueChange(itemDetails.copy(quantity = it)) },
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
             label = { Text(stringResource(R.string.quantity_req)) },
@@ -173,11 +174,9 @@ fun StudentInputForm(
 @Preview(showBackground = true)
 @Composable
 private fun ItemEntryScreenPreview() {
-    InventoryTheme {
         ItemEntryBody(itemUiState = ItemUiState(
             ItemDetails(
                 name = "Item name", price = "10.00", quantity = "5"
             )
         ), onItemValueChange = {}, onSaveClick = {})
-    }
 }
