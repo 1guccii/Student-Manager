@@ -1,10 +1,10 @@
 package com.j4kerstudio.studentmanager
 
 import android.app.Application
-import com.j4kerstudio.studentmanager.data.source.AppContainer
-import com.j4kerstudio.studentmanager.data.source.AppDataContainer
+import com.j4kerstudio.studentmanager.data.model.AppContainer
+import com.j4kerstudio.studentmanager.data.model.AppDataContainer
 
-class StudentApplication : Application() {
+class ItemApplication : Application() {
     lateinit var container: AppContainer
 
     override fun onCreate() {
