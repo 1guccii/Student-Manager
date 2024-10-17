@@ -4,9 +4,6 @@ import android.content.Context
 import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import com.j4kerstudio.studentmanager.data.model.Student
-import com.j4kerstudio.studentmanager.data.model.StudentDao
-import com.j4kerstudio.studentmanager.data.model.StudentDatabase
 import junit.framework.TestCase.assertEquals
 import kotlinx.coroutines.runBlocking
 import org.junit.After

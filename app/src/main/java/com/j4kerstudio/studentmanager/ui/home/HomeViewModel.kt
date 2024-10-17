@@ -2,7 +2,6 @@ package com.j4kerstudio.studentmanager.ui.home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.j4kerstudio.studentmanager.data.model.Student
 import com.j4kerstudio.studentmanager.data.repository.StudentRepository
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow

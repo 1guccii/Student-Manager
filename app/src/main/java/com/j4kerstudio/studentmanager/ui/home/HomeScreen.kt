@@ -39,8 +39,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.j4kerstudio.studentmanager.InventoryTopAppBar
 import com.j4kerstudio.studentmanager.R
-import com.j4kerstudio.studentmanager.data.model.Student
 import com.j4kerstudio.studentmanager.data.source.AppViewModelProvider
 import com.j4kerstudio.studentmanager.ui.navigation.NavigationDestination
 
@@ -101,7 +101,7 @@ fun HomeScreen(
 
 @Composable
 private fun HomeBody(
-    itemList: List<Item>,
+    itemList: List<Student>,
     onItemClick: (Int) -> Unit,
     modifier: Modifier = Modifier,
     contentPadding: PaddingValues = PaddingValues(0.dp),
