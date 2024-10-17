@@ -1,4 +1,4 @@
-package com.j4kerstudio.studentmanager.data
+package com.j4kerstudio.studentmanager.data.source
 
 import android.content.Context
 import com.j4kerstudio.studentmanager.data.model.StudentDatabase

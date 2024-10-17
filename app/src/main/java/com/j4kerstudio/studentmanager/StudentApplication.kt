@@ -1,8 +1,8 @@
 package com.j4kerstudio.studentmanager
 
 import android.app.Application
-import com.j4kerstudio.studentmanager.data.AppContainer
-import com.j4kerstudio.studentmanager.data.AppDataContainer
+import com.j4kerstudio.studentmanager.data.source.AppContainer
+import com.j4kerstudio.studentmanager.data.source.AppDataContainer
 
 class StudentApplication : Application() {
     lateinit var container: AppContainer

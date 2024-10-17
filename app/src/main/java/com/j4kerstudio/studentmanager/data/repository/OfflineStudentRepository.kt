@@ -6,8 +6,7 @@ import kotlinx.coroutines.flow.Flow
 
 
 class OfflineStudentRepository(private val studentDao: StudentDao) : StudentRepository {
-
-    override fun getAllStudent(): Flow<List<Student>> = studentDao.getAllStudents()
+    override fun getAllStudentStream(): Flow<List<Student>> = studentDao.getAllStudents()
 
     override fun getStudentStream(id: Int): Flow<Student?> = studentDao.getStudent(id)
 
@@ -16,8 +15,4 @@ class OfflineStudentRepository(private val studentDao: StudentDao) : StudentRepo
     override suspend fun deleteStudent(student: Student) = studentDao.deleteStudent(student)
 
     override suspend fun updateStudent(student: Student) = studentDao.updateStudent(student)
-
 }
-
-
-
