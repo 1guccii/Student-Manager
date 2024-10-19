@@ -18,7 +18,7 @@ Thêm hồ sơ sinh viên.
 
 Xóa hồ sơ sinh viên.
 
-Cập nhật hồ sơ sinh viên lên cơ sở dữ liệu.
+Cập nhật hồ sơ sinh viên lên cơ sở dữ liệu.<br><br>
 
 ## UML Dự Án
 
