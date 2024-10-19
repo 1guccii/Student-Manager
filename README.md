@@ -23,7 +23,7 @@ Tìm kiếm sinh viên.
 Thêm sinh viên vào lớp học.
 
 
-Xóa sinh viên khỏi lớp học.
+Xóa sinh viên khỏi lớp học.<br> <br>   
 
 
 
