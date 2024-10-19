@@ -26,27 +26,28 @@ Thêm sinh viên vào lớp học.
 Xóa sinh viên khỏi lớp học.
 
 
+
 ## UML Dự Án
 
 ### 1.1 UML Component Diagram
-<img src="https://github.com/user-attachments/assets/20a3457a-35fc-4b49-ae2b-4b5c7f98efaf" alt="UML Component Diagram" width="600">
+<img src="https://github.com/user-attachments/assets/20a3457a-35fc-4b49-ae2b-4b5c7f98efaf" alt="UML Component Diagram" width="500">
 
 ### 1.2 UML Sequence Diagram
 
 #### Tìm kiếm sinh viên
-<img src="https://github.com/user-attachments/assets/9a605c62-294d-4c34-b445-e0dfb2f5753e" alt="Tìm kiếm sinh viên" width="600">
+<img src="https://github.com/user-attachments/assets/9a605c62-294d-4c34-b445-e0dfb2f5753e" alt="Tìm kiếm sinh viên" width="500">
 
 #### Sửa thông tin sinh viên
-<img src="https://github.com/user-attachments/assets/4341739f-f2a2-41d3-bfd2-c35a2a0ab69c" alt="Sửa thông tin sinh viên" width="600">
+<img src="https://github.com/user-attachments/assets/4341739f-f2a2-41d3-bfd2-c35a2a0ab69c" alt="Sửa thông tin sinh viên" width="500">
 
 #### Xóa sinh viên
-<img src="https://github.com/user-attachments/assets/19908e05-a273-4e79-a5da-0d20fc35cff2" alt="Xóa sinh viên" width="600">
+<img src="https://github.com/user-attachments/assets/19908e05-a273-4e79-a5da-0d20fc35cff2" alt="Xóa sinh viên" width="500">
 
 ## Giao diện của dự án
-<img src="https://github.com/user-attachments/assets/c682af72-31f0-4cd2-9659-57a1bf52b5c1" alt="Giao diện của dự án" width="600">
+<img src="https://github.com/user-attachments/assets/c682af72-31f0-4cd2-9659-57a1bf52b5c1" alt="Giao diện của dự án" width="500">
 
-<img src="https://github.com/user-attachments/assets/265dbca2-3048-4103-9d93-1486e6878d4f" alt="Giao diện của dự án" width="600">
-<img src="https://github.com/user-attachments/assets/05fa74e7-07cd-48cf-8a05-6e793e41b0fe" alt="Giao diện của dự án" width="600">
+<img src="https://github.com/user-attachments/assets/265dbca2-3048-4103-9d93-1486e6878d4f" alt="Giao diện của dự án" width="500">
+<img src="https://github.com/user-attachments/assets/05fa74e7-07cd-48cf-8a05-6e793e41b0fe" alt="Giao diện của dự án" width="500">
 
 
 
