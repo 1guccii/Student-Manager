@@ -37,16 +37,13 @@ Cập nhật hồ sơ sinh viên lên cơ sở dữ liệu.
 <img src="https://github.com/user-attachments/assets/19908e05-a273-4e79-a5da-0d20fc35cff2" alt="Xóa sinh viên" width="500">
 
 ## Giao diện của dự án
-<img src="https://github.com/user-attachments/assets/c682af72-31f0-4cd2-9659-57a1bf52b5c1" alt="Giao diện của dự án" width="200" height = "400">
 
-<img src="https://github.com/user-attachments/assets/265dbca2-3048-4103-9d93-1486e6878d4f" alt="Giao diện của dự án" width="200" height = "200">
-<img src="https://github.com/user-attachments/assets/05fa74e7-07cd-48cf-8a05-6e793e41b0fe" alt="Giao diện của dự án" width="200" height = "200">
-
-
-
-
-
-
+<div style="display: flex; flex-direction: row;">
+    <img src="Screenshot_20241019_092248.png" alt="Giao diện của dự án" width="200" height="400">
+    <img src="Screenshot_20241019_092320.png" alt="Giao diện của dự án" width="200" height="400">
+    <img src="Screenshot_20241019_092348.png" alt="Giao diện của dự án" width="200" height="400">
+    <img src="Screenshot_20241019_092356.png" alt="Giao diện của dự án" width="200" height="400">
+</div>
 
 
 
