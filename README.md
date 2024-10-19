@@ -1,7 +1,7 @@
 # Hệ Thống Quản Lý Sinh Viên
 
 ## Giới Thiệu Dự Án
-Dự án này là một hệ thống quản lý sinh viên, giúp tối ưu hóa và cải thiện hiệu quả hoạt động của nhà trường. Hệ thống cho phép quản lý hồ sơ sinh viên.
+Dự án này là một hệ thống quản lý sinh viên, giúp tối ưu hóa và cải thiện hiệu quả hoạt động của nhà trường. Ứng dụng cho phép quản lý hồ sơ và học phí của sinh viên.
 
 ## Thành Viên Nhóm:
 
@@ -14,18 +14,11 @@ Hoàng Đức Mạnh : Phát triển phần mềm.
 ## Chức Năng Chính: 
 
 
-Thêm, sửa, xóa hồ sơ sinh viên.
+Thêm hồ sơ sinh viên.
 
+Xóa hồ sơ sinh viên.
 
-Tìm kiếm sinh viên.
-
-
-Thêm sinh viên vào lớp học.
-
-
-Xóa sinh viên khỏi lớp học.<br> <br>   
-
-
+Cập nhật hồ sơ sinh viên lên cơ sở dữ liệu.
 
 ## UML Dự Án
 
@@ -34,7 +27,7 @@ Xóa sinh viên khỏi lớp học.<br> <br>
 
 ### 1.2 UML Sequence Diagram
 
-#### Tìm kiếm sinh viên
+#### Hiển thị sinh viên
 <img src="https://github.com/user-attachments/assets/9a605c62-294d-4c34-b445-e0dfb2f5753e" alt="Tìm kiếm sinh viên" width="500">
 
 #### Sửa thông tin sinh viên
@@ -44,10 +37,10 @@ Xóa sinh viên khỏi lớp học.<br> <br>
 <img src="https://github.com/user-attachments/assets/19908e05-a273-4e79-a5da-0d20fc35cff2" alt="Xóa sinh viên" width="500">
 
 ## Giao diện của dự án
-<img src="https://github.com/user-attachments/assets/c682af72-31f0-4cd2-9659-57a1bf52b5c1" alt="Giao diện của dự án" width="500">
+<img src="https://github.com/user-attachments/assets/c682af72-31f0-4cd2-9659-57a1bf52b5c1" alt="Giao diện của dự án" width="200" height = "400">
 
-<img src="https://github.com/user-attachments/assets/265dbca2-3048-4103-9d93-1486e6878d4f" alt="Giao diện của dự án" width="500">
-<img src="https://github.com/user-attachments/assets/05fa74e7-07cd-48cf-8a05-6e793e41b0fe" alt="Giao diện của dự án" width="500">
+<img src="https://github.com/user-attachments/assets/265dbca2-3048-4103-9d93-1486e6878d4f" alt="Giao diện của dự án" width="200" height = "200">
+<img src="https://github.com/user-attachments/assets/05fa74e7-07cd-48cf-8a05-6e793e41b0fe" alt="Giao diện của dự án" width="200" height = "200">
 
 
 
