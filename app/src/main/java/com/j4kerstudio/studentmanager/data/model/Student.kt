@@ -6,11 +6,10 @@ import androidx.room.PrimaryKey
 /**
  * Entity data class represents a single row in the database.
  */
-@Entity(tableName = "items")
-data class Item(
-    @PrimaryKey(autoGenerate = true)
-    val id: Int = 0,
-    val name: String,
-    val price: Double,
-    val quantity: Int
-)
+@Entity(tableName = "student")
+data class Student(
+    @PrimaryKey
+    val idStudent: Int = 0,
+    val nameStudent: String,
+    val idClass: Double,
+    )

@@ -3,8 +3,8 @@ package com.j4kerstudio.studentmanager.ui.home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.j4kerstudio.studentmanager.data.model.Item
 import com.j4kerstudio.studentmanager.data.model.ItemsRepository
+import com.j4kerstudio.studentmanager.data.model.Student
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.map
@@ -35,4 +35,4 @@ class HomeViewModel(itemsRepository: ItemsRepository) : ViewModel() {
 /**
  * Ui State for HomeScreen
  */
-data class HomeUiState(val itemList: List<Item> = listOf())
+data class HomeUiState(val itemList: List<Student> = listOf())
