@@ -12,19 +12,17 @@ import com.j4kerstudio.studentmanager.ui.student.ItemEntryViewModel
 
 object AppViewModelProvider {
     val Factory = viewModelFactory {
-        // Initializer for ItemEditViewModel
+
         initializer {
             ItemEditViewModel(
                 this.createSavedStateHandle(),
                 inventoryApplication().container.itemsRepository
             )
         }
-        // Initializer for ItemEntryViewModel
         initializer {
             ItemEntryViewModel(inventoryApplication().container.itemsRepository)
         }
 
-        // Initializer for ItemDetailsViewModel
         initializer {
             ItemDetailsViewModel(
                 this.createSavedStateHandle(),
@@ -32,7 +30,6 @@ object AppViewModelProvider {
             )
         }
 
-        // Initializer for HomeViewModel
         initializer {
             HomeViewModel(inventoryApplication().container.itemsRepository)
         }

@@ -2,9 +2,7 @@ package com.j4kerstudio.studentmanager.data.model
 
 import kotlinx.coroutines.flow.Flow
 
-/**
- * Repository that provides insert, update, delete, and retrieve of [Item] from a given data source.
- */
+
 interface ItemsRepository {
     /**
      * Retrieve all the items from the the given data source.

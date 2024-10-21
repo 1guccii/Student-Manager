@@ -11,9 +11,7 @@ import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 
 import com.j4kerstudio.studentmanager.data.model.ItemsRepository
-/**
- * ViewModel to retrieve, update and delete an item from the [ItemsRepository]'s data source.
- */
+
 class ItemDetailsViewModel(
     savedStateHandle: SavedStateHandle,
     private val itemsRepository: ItemsRepository,
@@ -21,10 +19,6 @@ class ItemDetailsViewModel(
 
     private val itemId: Int = checkNotNull(savedStateHandle[ItemDetailsDestination.itemIdArg])
 
-    /**
-     * Holds the item details ui state. The data is retrieved from [ItemsRepository] and mapped to
-     * the UI state.
-     */
     val uiState: StateFlow<ItemDetailsUiState> =
         itemsRepository.getItemStream(itemId)
             .filterNotNull()
@@ -36,9 +30,6 @@ class ItemDetailsViewModel(
                 initialValue = ItemDetailsUiState()
             )
 
-    /**
-     * Reduces the item quantity by one and update the [ItemsRepository]'s data source.
-     */
     fun reduceQuantityByOne() {
         viewModelScope.launch {
             val currentItem = uiState.value.itemDetails.toItem()
@@ -48,9 +39,6 @@ class ItemDetailsViewModel(
         }
     }
 
-    /**
-     * Deletes the item from the [ItemsRepository]'s data source.
-     */
     suspend fun deleteItem() {
         itemsRepository.deleteItem(uiState.value.itemDetails.toItem())
     }

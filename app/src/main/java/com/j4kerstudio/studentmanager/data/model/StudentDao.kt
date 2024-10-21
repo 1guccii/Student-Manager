@@ -9,9 +9,6 @@ import androidx.room.Query
 import androidx.room.Update
 import kotlinx.coroutines.flow.Flow
 
-/**
- * Database access object to access the Inventory database
- */
 @Dao
 interface StudentDao {
 

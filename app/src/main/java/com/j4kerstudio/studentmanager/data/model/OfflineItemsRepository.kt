@@ -2,9 +2,6 @@ package com.j4kerstudio.studentmanager.data.model
 
 import kotlinx.coroutines.flow.Flow
 
-/**
- * Repository that provides insert, update, delete, and retrieve of [Item] from a given data source.
- */
 
 
 class OfflineItemsRepository(private val itemDao: StudentDao) : ItemsRepository {

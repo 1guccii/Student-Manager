@@ -2,9 +2,7 @@ package com.j4kerstudio.studentmanager.data.model
 
 import android.content.Context
 
-/**
- * App container for Dependency injection.
- */
+
 interface AppContainer {
     val itemsRepository: ItemsRepository
 }
